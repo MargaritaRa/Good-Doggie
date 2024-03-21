@@ -1,3 +1,31 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This is content added by javascript";
-document.querySelector("body").append(h2);
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+fetch("http://localhost:3000/countries")
+.then(response => response.json())
+.then(countries => {
+    countries.forEach(country => {
+        const button = document.createElement("button");
+        button.textContent = country.name;
+        button.addEventListener("click", () => {displayCountriesDetails(country);});
+        document.querySelector("#countries").appendChild(button)
+    });
+    // displayCountriesDetails();
+});
+
+
+function displayCountriesDetails(country){
+    document.querySelector("#countries-capital").textContent = country.capital;
+    document.querySelector("#countries-language").textContent = country.language;
+    document.querySelector("#countries-tipping").textContent = country.tipping;
+    document.querySelector("#countries-hello").textContent = country.hello;
+    document.querySelector("#countries-thankYou").textContent = country.thankYou;
+    document.querySelector("#countries-passportVisa").textContent = country.passportVisa;
+    document.querySelector("#countries-food").textContent = country.food;
+}

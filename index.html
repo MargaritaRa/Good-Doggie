@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="style.css" />
-        <tittle>Good Doggie</tittle>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="styleSheet" href="style.css"/>
+        <tittle ></tittle>
         <script defer src="index.js"></script>
     </head>
     <body>
-        <h1 id="tittle">What's The Right Dog For Me?</h1>
+        <h1 id="tittle">Where should I go next?</h1>
+        <div class="container" id="countries">
+            <button id="countries-button" type="submit" name="popupBtn" class="btn" onclick="openPopup()">
+            </button>
+            <div class="popup" id="popup">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczN6oxwwglVGWN23Vq_m5B-X9W-4tmGmOdWCqCnojW49_NjAgeN9MkwtLh9TUG5o53mrccIM2Ps_Y-fRqef2H95VuzVOqfafDeARznOddllo7YbcVKdw=w2400">
+                <h2 id="countryName" name="nameOfcountry"></h2>
+                <ul>
+                    <li>Capital City: <span id="countries-capital"></span></li>
+                    <li>Language Mainly Spoken: <span id="countries-language"></span></li>
+                    <li>Tipping Culture: <span id="countries-tipping"></span></li>
+                    <li>How to say Hello: <span id="countries-hello"></span></li>
+                    <li>How to say Thank You: <span  id="countries-thankYou"></span></li>
+                    <li>Passport/Visa: <span  id="countries-passportVisa"></span></li>
+                    <li>Foods to try: <span  id="countries-food"></span></li>
+                    <li><img class="countries-slidshow"> </li>
+                </ul>
+                <button type="button" name="done" onclick="closePopup()">Done</button>
+            </div>
+        </div>
     </body>
 </html>
