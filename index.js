@@ -10,11 +10,12 @@ function closePopup(){
 fetch("http://localhost:3000/countries")
 .then(response => response.json())
 .then(countries => {
+    const nameOfCountry = document.querySelector("#nameOfCountry");
     countries.forEach(country => {
-        const button = document.createElement("button");
-        button.textContent = country.name;
-        button.addEventListener("click", () => {displayCountriesDetails(country);});
-        document.querySelector("#countries").appendChild(button)
+        const span = document.createElement("span");
+        span.textContent = country.name;
+        span.addEventListener("click", () => {displayCountriesDetails(country);});
+        nameOfCountry.appendChild(span);
     });
     // displayCountriesDetails();
 });
