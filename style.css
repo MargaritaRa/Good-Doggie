@@ -1,3 +1,4 @@
+
 body {
     height: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), URL("https://lh3.googleusercontent.com/pw/AP1GczPOz00wvKGvXy6fDrmyq5Qko_QbW7bStZZ9hH0M5KT-4_dyWEnVfrOjipbOjguqDAoldYCYuP5viZb_TEMtyYwRXn_mDLWfVfDSVNTlAznsvso1QB99=w2400");
@@ -38,7 +39,6 @@ h1 {
     width: 400px;
     background: #fff;
     border-radius: 6px;
-    position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
@@ -66,7 +66,7 @@ h1 {
     font-weight: 500;
     margin: 30px 0 10px;
 }
- .countries-button {
+ .doneButton {
     width: 100%;
     margin-top: 50px;
     padding: 10px 0;

@@ -6,11 +6,16 @@
         <tittle ></tittle>
         <script defer src="index.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet'>
+        <link link href="./output.css" rel="stylesheet">
     </head>
     <body>
         <h1 id="tittle">Where should I go next?</h1>
+        <h2 class="text-3xl font-bold underline">
+            Hello world!
+          </h2>
         <div class="container" id="countries">
-            <button id="countries-button" type="submit" name="popupBtn" class="btn" onclick="openPopup()">Name Of Country</button>
+            <div class="btn" id="newButtons"></div>
+            <button id="countries-button" type="submit" name="popupBtn" onclick="openPopup()">Name Of Country</button>
             <div class="popup" id="popup">
                 <img src="https://lh3.googleusercontent.com/pw/AP1GczN6oxwwglVGWN23Vq_m5B-X9W-4tmGmOdWCqCnojW49_NjAgeN9MkwtLh9TUG5o53mrccIM2Ps_Y-fRqef2H95VuzVOqfafDeARznOddllo7YbcVKdw=w2400">
                 <h2 id="countryName" name="nameOfcountry"></h2>
@@ -18,13 +23,13 @@
                     <li>Capital City: <span id="countries-capital"></span></li>
                     <li>Language Mainly Spoken: <span id="countries-language"></span></li>
                     <li>Tipping Culture: <span id="countries-tipping"></span></li>
-                    <li>How to say Hello: <span id="countries-hello"></span></li>
-                    <li>How to say Thank You: <span  id="countries-thankYou"></span></li>
+                    <li>How to say 'Hello': <span id="countries-hello"></span></li>
+                    <li>How to say 'Thank You': <span  id="countries-thankYou"></span></li>
                     <li>Passport/Visa: <span  id="countries-passportVisa"></span></li>
                     <li>Foods to try: <span  id="countries-food"></span></li>
                     <li><img class="countries-slidshow"> </li>
                 </ul>
-                <button type="button" name="done" onclick="closePopup()">Done</button>
+                <button type="button" id="doneButton" name="done" onclick="closePopup()">Done</button>
             </div>
         </div>
     </body>
